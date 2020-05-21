@@ -12,5 +12,4 @@ install:
   
 script:
   - msbuild /p:Configuration=Release Pacman.sln
-  - dotnet build
   - dotnet test PacmanTest/PacmanTest.csproj

@@ -12,4 +12,4 @@ install:
   
 script:
   - msbuild /p:Configuration=Release Pacman.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./PacmanTest.Test/bin/Release/PacmanTest.Test.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./PacmanTest/bin/Release/PacmanTest.dll

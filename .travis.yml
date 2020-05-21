@@ -1,4 +1,13 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: csharp
+solution: Pacman.sln
+
+mono:
+-latest
+
+install:
+  - nuget restore Pacman.sln
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+
+script:
+- msbuild /p:Configuration=Release Pacman.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./TestPacman/bin/Release/TestPacman.dll

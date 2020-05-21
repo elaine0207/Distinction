@@ -1,6 +1,8 @@
 language: csharp
 solution: Pacman.sln
 
+mono: latest
+
 install:
   - nuget restore Pacman.sln
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner

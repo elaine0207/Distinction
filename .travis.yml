@@ -3,8 +3,9 @@ solution: Pacman.sln
 
 mono: latest
 
-install:
 dotnet: 3.1
+
+install:
   - dotnet restore
   - nuget restore Pacman.sln
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
